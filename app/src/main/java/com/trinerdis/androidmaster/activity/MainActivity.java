@@ -3,19 +3,27 @@ package com.trinerdis.androidmaster.activity;
 import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
 import android.util.DisplayMetrics;
 import android.util.Log;
 
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 
 import com.trinerdis.androidmaster.R;
 import com.trinerdis.androidmaster.adapter.DividerItemDecoration;
 import com.trinerdis.androidmaster.adapter.ExamplesAdapter;
 
+/**
+ * Main application activity with list of examples.
+ *
+ * http://developer.android.com/training/material/lists-cards.html
+ * http://developer.android.com/reference/android/support/v7/widget/RecyclerView.html
+ * http://developer.android.com/reference/android/support/v7/widget/RecyclerView.Adapter.html
+ * http://javatechig.com/android/android-recyclerview-example
+ */
 public class MainActivity extends AppCompatActivity {
 
     private static final String Tag = MainActivity.class.getSimpleName();
