@@ -1,15 +1,58 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme"
-        parent="Theme.AppCompat.NoActionBar">
+    <style
+        name="AppTheme"
+        parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Hide action bar. -->
         <item name="windowActionBar">false</item>
 
-        <!-- Customize your theme here. -->
+        <!-- Custom colors. -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primaryDark</item>
         <item name="colorAccent">@color/accent</item>
 
-        <item name="android:windowBackground">@color/background</item>
+        <!-- Custom styles overrides. -->
+        <item name="toolbarStyle">@style/AppTheme.ToolbarStyle</item>
+        <!--<item name="android:windowBackground">@color/background</item>-->
+
+        <!-- Custom styles. -->
+        <item name="textAppearanceListItemName">@style/TextAppearance.AppCompat.Body2</item>
+        <item name="textAppearanceListItemDescription">@style/TextAppearance.AppCompat.Body1</item>
+
+        <!--
+        <item name="textAppearanceListItemName">@style/Base.TextAppearance.AppCompat.Title</item>
+        <item name="textAppearanceListItemDescription">@style/Base.TextAppearance.AppCompat.Caption</item>
+        -->
+
+        <!--
+        <item name="textAppearanceListItemName">@style/TextAppearance.ListItem.Name</item>
+        <item name="textAppearanceListItemDescription">@style/TextAppearance.ListItem.Description</item>
+        -->
+    </style>
+
+    <style name="AppTheme.ToolbarStyle" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse</item>
+        <item name="subtitleTextAppearance">@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle</item>
+    </style>
+
+    <style
+        name="TextAppearance.ListItem"
+        parent="TextAppearance.AppCompat">
+    </style>
+
+    <style name="TextAppearance.ListItem.Name">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?attr/android:textColorPrimary</item>
+        <item name="android:textColorHint">?android:attr/textColorHint</item>
+        <item name="android:textColorHighlight">?android:attr/textColorHighlight</item>
+        <item name="android:textColorLink">?android:attr/textColorLink</item>
+    </style>
+
+    <style name="TextAppearance.ListItem.Description">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:textColorHint">?android:attr/textColorHint</item>
+        <item name="android:textColorHighlight">?android:attr/textColorHighlight</item>
+        <item name="android:textColorLink">?android:attr/textColorLink</item>
     </style>
 </resources>
