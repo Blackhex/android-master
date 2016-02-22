@@ -57,9 +57,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Configure recycler view.
+        final RecyclerView.Adapter adapter = new ExamplesAdapter(this);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this));
-        mRecyclerView.setAdapter(new ExamplesAdapter(this));
+        mRecyclerView.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
     }
 }
