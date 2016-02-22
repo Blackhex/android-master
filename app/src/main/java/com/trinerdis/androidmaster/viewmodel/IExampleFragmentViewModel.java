@@ -15,5 +15,5 @@ public interface IExampleFragmentViewModel {
 
     int getSquarePositionY();
 
-    int setSquarePosition(int x, int y);
+    void setSquarePosition(int x, int y);
 }

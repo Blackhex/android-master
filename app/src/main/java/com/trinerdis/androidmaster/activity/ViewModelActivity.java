@@ -1,13 +1,15 @@
 package com.trinerdis.androidmaster.activity;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
+
 import com.trinerdis.androidmaster.R;
+import com.trinerdis.androidmaster.fragment.DynamicFragment;
 import com.trinerdis.androidmaster.fragment.ViewModelFragment;
 import com.trinerdis.androidmaster.view.IExampleActivityView;
 import com.trinerdis.androidmaster.viewmodel.ExampleActivityViewModel;
@@ -149,7 +151,7 @@ public class ViewModelActivity extends ViewModelBaseActivity<IExampleActivityVie
     private Fragment createFragment(String title) {
         Log.d(TAG, "createFragment(): title: " + title);
 
-        //return DynamicFragment.newInstance(title);
-        return ViewModelFragment.newInstance(title);
+        return DynamicFragment.newInstance(title);
+        //return ViewModelFragment.newInstance(title);
     }
 }

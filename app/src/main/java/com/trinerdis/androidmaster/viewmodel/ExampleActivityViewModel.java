@@ -106,6 +106,7 @@ public class ExampleActivityViewModel extends AbstractViewModel<IExampleActivity
 
         super.bindView(view);
 
+        // Bind view with view-model.
         view.bindViewModel(this);
         view.setTitle(mTitle);
         view.replaceFragment(getFragmentTitle());
@@ -117,6 +118,7 @@ public class ExampleActivityViewModel extends AbstractViewModel<IExampleActivity
 
         super.saveState(bundle);
 
+        // Store view-model state attributes.
         bundle.putInt(State.ID, mId);
         bundle.putString(State.TITLE, mTitle);
     }
@@ -135,11 +137,11 @@ public class ExampleActivityViewModel extends AbstractViewModel<IExampleActivity
         super.onCreate(arguments, savedInstanceState);
 
         if (savedInstanceState != null) {
-            // Restore view-model properties.
+            // Restore view-model state attributes.
             mId = savedInstanceState.getInt(State.ID);
             mTitle = savedInstanceState.getString(State.TITLE);
         } else {
-            // Initialize view-model properties.
+            // Initialize view-model state attributes.
             mId = 1;
             mTitle = AndroidMaster.getResourceString(R.string.view_model_activity_title);
         }

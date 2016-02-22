@@ -16,6 +16,7 @@
         <!-- Custom styles overrides. -->
         <item name="toolbarStyle">@style/AppTheme.Toolbar</item>
         <!--<item name="android:windowBackground">@color/background</item>-->
+        <item name="android:buttonStyle">@style/AppTheme.Button</item>
 
         <!-- Custom styles. -->
         <item name="textAppearanceListItemName">@style/TextAppearance.AppCompat.Body2</item>
@@ -32,9 +33,21 @@
         -->
     </style>
 
-    <style name="AppTheme.Toolbar" parent="Base.Widget.AppCompat.Toolbar">
-        <item name="titleTextAppearance">@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse</item>
-        <item name="subtitleTextAppearance">@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle</item>
+    <style
+        name="AppTheme.Toolbar"
+        parent="Base.Widget.AppCompat.Toolbar">
+        <item name="titleTextAppearance">
+            @style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse
+        </item>
+        <item name="subtitleTextAppearance">
+            @style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle
+        </item>
+    </style>
+
+    <style
+        name="AppTheme.Button"
+        parent="Base.Widget.AppCompat.Button">
+        <item name="android:textColor">@color/text_inverse</item>
     </style>
 
     <style

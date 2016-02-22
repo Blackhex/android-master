@@ -5,4 +5,5 @@
     <color name="accent">#af4bc6</color>
     <color name="background">#ffffff</color>
     <color name="red">#ff0000</color>
+    <color name="text_inverse">#ffffff</color>
 </resources>
