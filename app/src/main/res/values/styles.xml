@@ -10,9 +10,11 @@
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primaryDark</item>
         <item name="colorAccent">@color/accent</item>
+        <item name="colorButtonNormal">@color/accent</item>
+        <item name="colorControlHighlight">@color/primary</item>
 
         <!-- Custom styles overrides. -->
-        <item name="toolbarStyle">@style/AppTheme.ToolbarStyle</item>
+        <item name="toolbarStyle">@style/AppTheme.Toolbar</item>
         <!--<item name="android:windowBackground">@color/background</item>-->
 
         <!-- Custom styles. -->
@@ -30,7 +32,7 @@
         -->
     </style>
 
-    <style name="AppTheme.ToolbarStyle" parent="Base.Widget.AppCompat.Toolbar">
+    <style name="AppTheme.Toolbar" parent="Base.Widget.AppCompat.Toolbar">
         <item name="titleTextAppearance">@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse</item>
         <item name="subtitleTextAppearance">@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle</item>
     </style>

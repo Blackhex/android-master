@@ -20,6 +20,7 @@
         android:id="@+id/description_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:textAppearance="?attr/textAppearanceListItemDescription"
         tools:text="Example description."/>
 </LinearLayout>
