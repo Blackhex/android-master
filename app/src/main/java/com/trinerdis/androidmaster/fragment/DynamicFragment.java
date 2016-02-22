@@ -21,7 +21,7 @@ import java.util.Random;
 
 /**
  * Fragment for DynamicFragmentActivity.
- *
+ * <p/>
  * http://developer.android.com/guide/components/activities.html
  * http://developer.android.com/guide/components/fragments.html
  * http://developer.android.com/guide/topics/resources/runtime-changes.html
@@ -30,16 +30,22 @@ public class DynamicFragment extends Fragment {
 
     private final String TAG = DynamicFragment.class.getSimpleName();
 
+    /**
+     * Identifiers of fragment arguments.
+     */
     public static class Argument {
         public static final String TITLE = "title";
     }
 
+    /**
+     * Identifiers of fragment state attributes.
+     */
     private static class State {
         public static final String TITLE = "state_title";
     }
 
     /**
-     * Title as a fragment state member.
+     * Title as a fragment state attribute.
      */
     protected String mTitle;
 

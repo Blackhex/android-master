@@ -13,6 +13,7 @@ import com.trinerdis.androidmaster.R;
 import com.trinerdis.androidmaster.activity.DynamicFragmentActivity;
 import com.trinerdis.androidmaster.activity.MainActivity;
 import com.trinerdis.androidmaster.activity.StaticFragmentActivity;
+import com.trinerdis.androidmaster.activity.ViewModelActivity;
 
 /**
  * Constant adapter with example items.
@@ -83,7 +84,7 @@ public class ExamplesAdapter extends RecyclerView.Adapter<ExamplesAdapter.ViewHo
             new Item(
                 mContext.getString(R.string.example_3_name),
                 mContext.getString(R.string.example_3_description),
-                MainActivity.class
+                ViewModelActivity.class
             ),
             new Item(
                 mContext.getString(R.string.example_4_name),

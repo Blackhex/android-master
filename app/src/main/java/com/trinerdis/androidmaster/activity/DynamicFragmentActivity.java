@@ -18,12 +18,15 @@ public class DynamicFragmentActivity extends AppCompatActivity {
 
     private static final String TAG = DynamicFragmentActivity.class.getSimpleName();
 
+    /**
+     * Identifiers of activity state attributes.
+     */
     private static class State {
         private static final String ID = "state_id";
     }
 
     /**
-     * Some activity state member.
+     * Some activity state attribute.
      */
     protected int mId = 1;
 

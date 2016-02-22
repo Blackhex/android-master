@@ -1,13 +1,14 @@
 <resources>
     <string name="application_name">Android Master</string>
     <string name="main_activity_title">Staň se Android Masterem!</string>
+    <string name="view_model_activity_title">inloop/AndroidViewModel</string>
 
     <string name="example_1_name">Static Fragment</string>
     <string name="example_1_description">This example demonstrates lifecycle of statically added fragment.</string>
     <string name="example_2_name">Dynamic Fragment</string>
     <string name="example_2_description">This example demonstrates complexity of dynamic fragments lifecycle handling.</string>
-    <string name="example_3_name">Data Binding</string>
-    <string name="example_3_description"></string>
+    <string name="example_3_name">inloop/AndroidViewModel</string>
+    <string name="example_3_description">This example show how use inloop/AndroidViewModel library.</string>
     <string name="example_4_name">Tabs</string>
     <string name="example_4_description"></string>
 
