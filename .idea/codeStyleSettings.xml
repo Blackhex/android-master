@@ -95,10 +95,13 @@
           </extensions>
         </Objective-C-extensions>
         <XML>
-          <option name="XML_ATTRIBUTE_WRAP" value="2" />
-          <option name="XML_ALIGN_ATTRIBUTES" value="false" />
-          <option name="XML_SPACE_INSIDE_EMPTY_TAG" value="true" />
+          <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
         </XML>
+        <codeStyleSettings language="Groovy">
+          <indentOptions>
+            <option name="CONTINUATION_INDENT_SIZE" value="4" />
+          </indentOptions>
+        </codeStyleSettings>
         <codeStyleSettings language="HTML">
           <indentOptions>
             <option name="CONTINUATION_INDENT_SIZE" value="4" />
@@ -132,7 +135,7 @@
                   <match>
                     <AND>
                       <NAME>xmlns:android</NAME>
-                      <XML_NAMESPACE />
+                      <XML_NAMESPACE>Namespace:</XML_NAMESPACE>
                     </AND>
                   </match>
                 </rule>
@@ -142,7 +145,7 @@
                   <match>
                     <AND>
                       <NAME>xmlns:.*</NAME>
-                      <XML_NAMESPACE />
+                      <XML_NAMESPACE>Namespace:</XML_NAMESPACE>
                     </AND>
                   </match>
                   <order>BY_NAME</order>
