@@ -19,6 +19,13 @@ import com.trinerdis.androidmaster.R;
 
 import java.util.Random;
 
+/**
+ * Fragment for DynamicFragmentActivity.
+ *
+ * http://developer.android.com/guide/components/activities.html
+ * http://developer.android.com/guide/components/fragments.html
+ * http://developer.android.com/guide/topics/resources/runtime-changes.html
+ */
 public class DynamicFragment extends Fragment {
 
     private final String TAG = DynamicFragment.class.getSimpleName();
@@ -31,19 +38,32 @@ public class DynamicFragment extends Fragment {
         public static final String TITLE = "state_title";
     }
 
+    /**
+     * Title as a fragment state member.
+     */
     protected String mTitle;
 
+    /**
+     * Fragment views.
+     */
     protected TextView mTitleTextView;
     protected ImageView mSquareImageView;
 
-    public static DynamicFragment newInstance(String label) {
+    /**
+     * Use static factory method for creating fragments using {@link Bundle}. Do not create
+     * parametrized fragments directly using constructor.
+     *
+     * @param title Fragment title text.
+     * @return {@link DynamicFragment} instance.
+     */
+    public static DynamicFragment newInstance(String title) {
 
         // Create fragment instance.
         final DynamicFragment instance = new DynamicFragment();
 
         // Create and set its arguments.
         final Bundle arguments = new Bundle();
-        arguments.putString(Argument.TITLE, label);
+        arguments.putString(Argument.TITLE, title);
         instance.setArguments(arguments);
 
         return instance;
