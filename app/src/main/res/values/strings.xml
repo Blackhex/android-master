@@ -2,12 +2,17 @@
     <string name="application_name">Android Master</string>
     <string name="main_activity_title">Staň se Android Masterem!</string>
 
-    <string name="example_1_name">Heterogenní RecyclerView</string>
-    <string name="example_1_description">Toto demo ukazuje příklad, jak použít RecyclerView pro zobrazení seznamu položek s různým rozložením.</string>
-    <string name="example_2_name">Dependency Injection</string>
-    <string name="example_2_description">Toto demo ukazuje příklady knihoven pro dependency injection.</string>
+    <string name="example_1_name">Static Fragment</string>
+    <string name="example_1_description">This example demonstrates lifecycle of statically added fragment.</string>
+    <string name="example_2_name">Dynamic Fragment</string>
+    <string name="example_2_description">This example demonstrates complexity of dynamic fragments lifecycle handling.</string>
     <string name="example_3_name">Data Binding</string>
-    <string name="example_3_description">Toto demo ukazuje Data Binding pro Android.</string>
-    <string name="example_4_name">Karty</string>
-    <string name="example_4_description">Příklad obrazovky s kartami a fragmenty.</string>
+    <string name="example_3_description"></string>
+    <string name="example_4_name">Tabs</string>
+    <string name="example_4_description"></string>
+
+    <string name="static_fragment_title">Static Fragment</string>
+    <string name="dynamic_fragment_title_pattern">Dynamic Fragment #%1d</string>
+    <string name="replace_button_text">Replace Fragment</string>
+    <string name="add_remove_button_text">Add/Remove Fragment</string>
 </resources>

@@ -26,14 +26,14 @@ import com.trinerdis.androidmaster.adapter.ExamplesAdapter;
  */
 public class MainActivity extends AppCompatActivity {
 
-    private static final String Tag = MainActivity.class.getSimpleName();
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     protected Toolbar mToolbar;
     protected RecyclerView mRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d(Tag, "onCreate()");
+        Log.d(TAG, "onCreate()");
 
         // Must call super.
         super.onCreate(savedInstanceState);

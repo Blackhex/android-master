@@ -10,7 +10,9 @@ import android.widget.TextView;
 import android.support.v7.widget.RecyclerView;
 
 import com.trinerdis.androidmaster.R;
+import com.trinerdis.androidmaster.activity.DynamicFragmentActivity;
 import com.trinerdis.androidmaster.activity.MainActivity;
+import com.trinerdis.androidmaster.activity.StaticFragmentActivity;
 
 /**
  * Constant adapter with example items.
@@ -71,12 +73,12 @@ public class ExamplesAdapter extends RecyclerView.Adapter<ExamplesAdapter.ViewHo
             new Item(
                 mContext.getString(R.string.example_1_name),
                 mContext.getString(R.string.example_1_description),
-                MainActivity.class
+                StaticFragmentActivity.class
             ),
             new Item(
                 mContext.getString(R.string.example_2_name),
                 mContext.getString(R.string.example_2_description),
-                MainActivity.class
+                DynamicFragmentActivity.class
             ),
             new Item(
                 mContext.getString(R.string.example_3_name),
