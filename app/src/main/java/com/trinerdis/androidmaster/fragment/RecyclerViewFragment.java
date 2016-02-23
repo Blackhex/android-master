@@ -13,6 +13,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.trinerdis.androidmaster.R;
+import com.trinerdis.androidmaster.adapter.AnimatedAdapter;
 import com.trinerdis.androidmaster.adapter.HeterogeneousAdapter;
 
 /**
