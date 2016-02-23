@@ -62,6 +62,5 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this));
         mRecyclerView.setAdapter(adapter);
-        adapter.notifyDataSetChanged();
     }
 }

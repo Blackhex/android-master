@@ -11,7 +11,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.trinerdis.androidmaster.R;
 import com.trinerdis.androidmaster.activity.DynamicFragmentActivity;
-import com.trinerdis.androidmaster.activity.MainActivity;
+import com.trinerdis.androidmaster.activity.RecyclerViewActivity;
 import com.trinerdis.androidmaster.activity.StaticFragmentActivity;
 import com.trinerdis.androidmaster.activity.ViewModelActivity;
 
@@ -74,22 +74,22 @@ public class ExamplesAdapter extends RecyclerView.Adapter<ExamplesAdapter.ViewHo
             new Item(
                 mContext.getString(R.string.example_1_name),
                 mContext.getString(R.string.example_1_description),
-                StaticFragmentActivity.class
+                RecyclerViewActivity.class
             ),
             new Item(
                 mContext.getString(R.string.example_2_name),
                 mContext.getString(R.string.example_2_description),
-                DynamicFragmentActivity.class
+                StaticFragmentActivity.class
             ),
             new Item(
                 mContext.getString(R.string.example_3_name),
                 mContext.getString(R.string.example_3_description),
-                ViewModelActivity.class
+                DynamicFragmentActivity.class
             ),
             new Item(
                 mContext.getString(R.string.example_4_name),
                 mContext.getString(R.string.example_4_description),
-                MainActivity.class
+                ViewModelActivity.class
             )
         };
     }
