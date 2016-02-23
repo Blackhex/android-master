@@ -13,6 +13,7 @@ import com.trinerdis.androidmaster.R;
 import com.trinerdis.androidmaster.activity.DynamicFragmentActivity;
 import com.trinerdis.androidmaster.activity.RecyclerViewActivity;
 import com.trinerdis.androidmaster.activity.StaticFragmentActivity;
+import com.trinerdis.androidmaster.activity.TabsActivity;
 import com.trinerdis.androidmaster.activity.ViewModelActivity;
 
 /**
@@ -90,6 +91,11 @@ public class ExamplesAdapter extends RecyclerView.Adapter<ExamplesAdapter.ViewHo
                 mContext.getString(R.string.example_4_name),
                 mContext.getString(R.string.example_4_description),
                 ViewModelActivity.class
+            ),
+            new Item(
+                mContext.getString(R.string.example_5_name),
+                mContext.getString(R.string.example_5_description),
+                TabsActivity.class
             )
         };
     }

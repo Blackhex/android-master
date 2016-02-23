@@ -12,6 +12,8 @@
     <string name="example_3_description">This example demonstrates complexity of dynamic fragments lifecycle handling.</string>
     <string name="example_4_name">inloop/AndroidViewModel</string>
     <string name="example_4_description">This example show how use inloop/AndroidViewModel library.</string>
+    <string name="example_5_name">Tabs</string>
+    <string name="example_5_description">This example show how to create activity with tabs and pages.</string>
 
     <string name="static_fragment_title">Static Fragment</string>
     <string name="dynamic_fragment_title_pattern">Dynamic Fragment #%1d</string>
