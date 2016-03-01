@@ -11,10 +11,16 @@ import android.support.v7.widget.RecyclerView;
 
 import com.trinerdis.androidmaster.R;
 import com.trinerdis.androidmaster.activity.DynamicFragmentActivity;
+import com.trinerdis.androidmaster.activity.MaterialDesignActivity;
 import com.trinerdis.androidmaster.activity.RecyclerViewActivity;
 import com.trinerdis.androidmaster.activity.StaticFragmentActivity;
 import com.trinerdis.androidmaster.activity.TabsActivity;
 import com.trinerdis.androidmaster.activity.ViewModelActivity;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Constant adapter with example items.
@@ -62,7 +68,7 @@ public class ExamplesAdapter extends RecyclerView.Adapter<ExamplesAdapter.ViewHo
     /**
      * Model items in the adapter.
      */
-    private final Item[] mItems;
+    private final List<Item> mItems;
 
     /**
      * Constructor.
@@ -71,7 +77,7 @@ public class ExamplesAdapter extends RecyclerView.Adapter<ExamplesAdapter.ViewHo
      */
     public ExamplesAdapter(Context context) {
         mContext = context;
-        mItems = new Item[]{
+        mItems = new ArrayList<>(Arrays.asList(new Item[] {
             new Item(
                 mContext.getString(R.string.example_1_name),
                 mContext.getString(R.string.example_1_description),
@@ -96,8 +102,16 @@ public class ExamplesAdapter extends RecyclerView.Adapter<ExamplesAdapter.ViewHo
                 mContext.getString(R.string.example_5_name),
                 mContext.getString(R.string.example_5_description),
                 TabsActivity.class
+            ),
+            new Item(
+                mContext.getString(R.string.example_6_name),
+                mContext.getString(R.string.example_6_description),
+                MaterialDesignActivity.class
             )
-        };
+        }));
+
+        // Reverse examples to chronological order.
+        Collections.reverse(mItems);
     }
 
     @Override
@@ -112,7 +126,7 @@ public class ExamplesAdapter extends RecyclerView.Adapter<ExamplesAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        final Item item = mItems[position];
+        final Item item = mItems.get(position);
 
         // Set item data.
         holder.nameTextView.setText(item.name);
@@ -123,14 +137,14 @@ public class ExamplesAdapter extends RecyclerView.Adapter<ExamplesAdapter.ViewHo
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View itemView) {
-                onItemClick(mItems[index]);
+                onItemClick(mItems.get(index));
             }
         });
     }
 
     @Override
     public int getItemCount() {
-        return mItems.length;
+        return mItems.size();
     }
 
     /**
