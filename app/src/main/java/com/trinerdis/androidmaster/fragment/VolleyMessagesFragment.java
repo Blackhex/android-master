@@ -8,8 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -22,17 +20,12 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonParseException;
 
-import com.trinerdis.androidmaster.R;
-import com.trinerdis.androidmaster.adapter.DividerItemDecoration;
-import com.trinerdis.androidmaster.adapter.MessagesAdapter;
 import com.trinerdis.androidmaster.api.Message;
 import com.trinerdis.androidmaster.utils.GsonRequest;
 
-import java.util.Arrays;
-
 /**
  * API design:
- * <p>
+ * <p/>
  * https://apiary.io/
  * https://apiblueprint.org/
  * http://editor.swagger.io/
@@ -41,32 +34,27 @@ import java.util.Arrays;
  * https://readme.io/
  * https://getsandbox.com/
  * https://apigility.org/
- * <p>
+ * <p/>
  * HttpURLConnection:
- * <p>
+ * <p/>
  * http://developer.android.com/reference/java/net/HttpURLConnection.html *
  * http://developer.android.com/about/versions/marshmallow/android-6.0-changes.html
  * https://docs.oracle.com/javase/tutorial/networking/urls/readingWriting.html
- * <p>
+ * <p/>
  * Volley:
- * <p>
+ * <p/>
  * https://github.com/mcxiaoke/android-volley
  * http://developer.android.com/training/volley/index.html
  * compile 'com.mcxiaoke.volley:library:1.0.19'
- * <p>
+ * <p/>
  * GSON:
- * <p>
+ * <p/>
  * https://github.com/google/gson
  * compile 'com.google.code.gson:gson:2.4'
  */
 public class VolleyMessagesFragment extends MessagesFragment {
 
     private static final String TAG = VolleyMessagesFragment.class.getSimpleName();
-
-    /**
-     * Base URL of application API.
-     */
-    private String mApiUrl;
 
     /**
      * Volley request queue.
@@ -97,9 +85,6 @@ public class VolleyMessagesFragment extends MessagesFragment {
         final Activity activity = getActivity();
         mQueue = Volley.newRequestQueue(activity);
 
-        // Load resources.
-        mApiUrl = getString(R.string.api_url);
-
         return root;
     }
 
@@ -110,7 +95,7 @@ public class VolleyMessagesFragment extends MessagesFragment {
         super.onResume();
 
         // Load/re-load messages.
-        //loadMessages1();
+        loadMessages1();
         //loadMessages2();
     }
 
@@ -121,7 +106,7 @@ public class VolleyMessagesFragment extends MessagesFragment {
         Log.d(TAG, "loadMessages1()");
 
         mQueue.add(
-            new StringRequest(Request.Method.GET, mApiUrl + "messages",
+            new StringRequest(Request.Method.GET, getMessagesUrl(),
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -155,31 +140,25 @@ public class VolleyMessagesFragment extends MessagesFragment {
     private void loadMessages2() {
         Log.d(TAG, "loadMessages2()");
 
-        mQueue.add(new GsonRequest<>(Request.Method.GET, mApiUrl + "messages", Message[].class,
-            new Response.Listener<Message[]>() {
-                @Override
-                public void onResponse(Message[] response) {
-                    Log.d(TAG, "GetMessagesRequest.onResponse()");
+        mQueue.add(
+            new GsonRequest<>(Request.Method.GET, getMessagesUrl(), Message[].class,
+                new Response.Listener<Message[]>() {
+                    @Override
+                    public void onResponse(Message[] response) {
+                        Log.d(TAG, "GetMessagesRequest.onResponse()");
 
-                    if (response != null) {
-                        showMessages(response);
+                        if (response != null) {
+                            showMessages(response);
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e(TAG, "GetMessagesRequest.onErrorResponse(): error: " + error);
                     }
                 }
-            },
-            new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Log.e(TAG, "GetMessagesRequest.onErrorResponse(): error: " + error);
-                }
-            }));
-    }
-
-    private void showMessages(Message[] messages) {
-        Log.d(TAG, "showMessages()");
-
-        // Update RecyclerView adapter.
-        mAdapter.clear();
-        mAdapter.addAll(Arrays.asList(messages));
-        mAdapter.notifyDataSetChanged();
+            )
+        );
     }
 }

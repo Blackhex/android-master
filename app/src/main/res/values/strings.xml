@@ -16,8 +16,10 @@
     <string name="example_5_description">This example show how to create activity with tabs and pages.</string>
     <string name="example_6_name">Material design</string>
     <string name="example_6_description">Empty activity for material design playground.</string>
-    <string name="example_7_name">Volley Library</string>
-    <string name="example_7_description">Volley Library demo.</string>
+    <string name="example_7_name">mcxiaoke/android-volley</string>
+    <string name="example_7_description">Volley library demo.</string>
+    <string name="example_8_name">square/retrofit</string>
+    <string name="example_8_description">Retrofit library demo.</string>
 
     <string name="static_fragment_title">Static Fragment</string>
     <string name="dynamic_fragment_title_pattern">Dynamic Fragment #%1d</string>
