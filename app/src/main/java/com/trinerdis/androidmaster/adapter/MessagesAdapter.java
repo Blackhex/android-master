@@ -3,6 +3,7 @@ package com.trinerdis.androidmaster.adapter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
@@ -15,21 +16,12 @@ import android.widget.TextView;
 import android.support.v7.widget.RecyclerView;
 
 import com.trinerdis.androidmaster.R;
+import com.trinerdis.androidmaster.api.Message;
 
 /**
  * Constant adapter with example items.
  */
 public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.ViewHolder> {
-
-    /**
-     * Message model.
-     */
-    public static class Message {
-
-        public Date date;
-        public String name;
-        public String text;
-    }
 
     /**
      * Adapted item view views holder.
@@ -78,6 +70,14 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.ViewHo
         item.name = "Test";
         item.text = "Test message";
         mItems.add(item);
+    }
+
+    public void clear() {
+        mItems.clear();
+    }
+
+    public void addAll(Collection<? extends Message> items) {
+        mItems.addAll(items);
     }
 
     @Override

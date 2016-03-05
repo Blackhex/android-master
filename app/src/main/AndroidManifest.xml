@@ -4,6 +4,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     >
 
+    <uses-permission
+        android:name="android.permission.INTERNET"/>
+
     <application
         android:name="com.trinerdis.androidmaster.AndroidMaster"
         android:allowBackup="true"
@@ -12,6 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         >
+
+
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

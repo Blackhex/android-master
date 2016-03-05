@@ -13,6 +13,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.trinerdis.androidmaster.R;
+import com.trinerdis.androidmaster.adapter.DividerItemDecoration;
 import com.trinerdis.androidmaster.adapter.MessagesAdapter;
 
 /**
@@ -21,6 +22,8 @@ import com.trinerdis.androidmaster.adapter.MessagesAdapter;
 public class MessagesFragment extends Fragment {
 
     private static final String TAG = MessagesFragment.class.getSimpleName();
+
+    protected MessagesAdapter mAdapter;
 
     protected RecyclerView mRecyclerView;
 
@@ -37,9 +40,10 @@ public class MessagesFragment extends Fragment {
 
         // Configure recycler view.
         final Activity activity = getActivity();
-        final RecyclerView.Adapter adapter = new MessagesAdapter(activity);
+        mAdapter = new MessagesAdapter(activity);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(activity));
-        mRecyclerView.setAdapter(adapter);
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(activity));
+        mRecyclerView.setAdapter(mAdapter);
 
         return root;
     }

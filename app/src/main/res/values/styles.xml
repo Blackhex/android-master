@@ -4,7 +4,9 @@
         name="AppTheme"
         parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Hide action bar. -->
+        <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
+        <item name="android:windowActionBarOverlay">false</item>
 
         <!-- Custom colors. -->
         <item name="colorPrimary">@color/primary</item>

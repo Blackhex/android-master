@@ -23,4 +23,5 @@
     <string name="dynamic_fragment_title_pattern">Dynamic Fragment #%1d</string>
     <string name="replace_button_text">Replace Fragment</string>
     <string name="add_remove_button_text">Add/Remove Fragment</string>
+    <string name="api_url">http://private-394ad9-androidmaster.apiary-mock.com/</string>
 </resources>
