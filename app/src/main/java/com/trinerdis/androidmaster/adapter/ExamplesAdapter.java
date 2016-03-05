@@ -16,6 +16,7 @@ import com.trinerdis.androidmaster.activity.RecyclerViewActivity;
 import com.trinerdis.androidmaster.activity.StaticFragmentActivity;
 import com.trinerdis.androidmaster.activity.TabsActivity;
 import com.trinerdis.androidmaster.activity.ViewModelActivity;
+import com.trinerdis.androidmaster.activity.VolleyActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -107,6 +108,11 @@ public class ExamplesAdapter extends RecyclerView.Adapter<ExamplesAdapter.ViewHo
                 mContext.getString(R.string.example_6_name),
                 mContext.getString(R.string.example_6_description),
                 MaterialDesignActivity.class
+            ),
+            new Item(
+                mContext.getString(R.string.example_7_name),
+                mContext.getString(R.string.example_7_description),
+                VolleyActivity.class
             )
         }));
 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.VolleyActivity"
+    >
+
+    <include layout="@layout/view_toolbar"/>
+
+    <fragment
+        android:id="@+id/messages_fragment_container"
+        android:name="com.trinerdis.androidmaster.fragment.MessagesFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_messages"
+        />
+</LinearLayout>

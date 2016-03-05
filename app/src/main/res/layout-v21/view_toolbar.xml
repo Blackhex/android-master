@@ -15,5 +15,4 @@
         android:minHeight="?attr/actionBarSize"
         app:title="@string/main_activity_title"
         />
-    <!-- android:background="@drawable/toolbar_background" -->
 </FrameLayout>
