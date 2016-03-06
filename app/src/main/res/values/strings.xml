@@ -20,6 +20,8 @@
     <string name="example_7_description">Volley library demo.</string>
     <string name="example_8_name">square/retrofit</string>
     <string name="example_8_description">Retrofit library demo.</string>
+    <string name="example_9_name">stephanenicolas/robospice</string>
+    <string name="example_9_description">RoboSpice library demo.</string>
 
     <string name="static_fragment_title">Static Fragment</string>
     <string name="dynamic_fragment_title_pattern">Dynamic Fragment #%1d</string>

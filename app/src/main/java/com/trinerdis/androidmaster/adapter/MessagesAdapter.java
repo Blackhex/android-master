@@ -95,7 +95,7 @@ public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.ViewHo
         final Message item = mItems.get(position);
 
         // Set item data.
-        holder.dateTextView.setText(mDateFormat.format(item.date));
+        holder.dateTextView.setText((item.date != null) ? mDateFormat.format(item.date) : "null");
         holder.nameTextView.setText(item.name + ":");
         holder.textTextView.setText(item.text);
     }

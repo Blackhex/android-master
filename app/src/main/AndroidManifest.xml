@@ -4,8 +4,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     >
 
+    <!-- For all libraries communicating over Internet. -->
     <uses-permission
         android:name="android.permission.INTERNET"/>
+
+    <!-- For RoboSpice only. -->
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:name="com.trinerdis.androidmaster.AndroidMaster"
@@ -15,7 +20,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         >
-
 
         <activity android:name=".activity.MainActivity">
             <intent-filter>
@@ -71,5 +75,16 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".activity.RoboSpiceActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.octo.android.robospice.GsonGoogleHttpClientSpiceService"
+            android:exported="false"
+            />
     </application>
 </manifest>

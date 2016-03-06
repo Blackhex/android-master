@@ -10,6 +10,8 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -25,10 +27,10 @@ dependencies {
 
     // Include support libraries.
     compile 'com.android.support:appcompat-v7:23.2.0'
-    compile 'com.android.support:support-v4:23.2.0'
     compile 'com.android.support:cardview-v7:23.2.0'
     compile 'com.android.support:recyclerview-v7:23.2.0'
     compile 'com.android.support:design:23.2.0'
+    compile 'com.android.support:multidex:1.0.1'
 
     // inloop/AndroidViewModel
     compile 'eu.inloop:androidviewmodel:0.4.0'
@@ -42,4 +44,12 @@ dependencies {
     // square/retrofit
     compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
     compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+
+    // stephanenicolas/robospice
+    compile 'com.octo.android.robospice:robospice:1.4.14'
+    compile 'com.octo.android.robospice:robospice-google-http-client:1.4.14'
+    compile('com.google.http-client:google-http-client-gson:1.21.0') {
+        exclude module: 'xpp3'
+        exclude group: 'stax'
+    }
 }
