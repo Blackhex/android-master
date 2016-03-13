@@ -28,4 +28,7 @@
     <string name="replace_button_text">Replace Fragment</string>
     <string name="add_remove_button_text">Add/Remove Fragment</string>
     <string name="api_url">http://private-394ad9-androidmaster.apiary-mock.com/</string>
+    <string name="example_10_name">DownloadManager</string>
+    <string name="example_10_description">DownloadManager demo with notification progress.</string>
+    <string name="start_download_button_text">Start Download</string>
 </resources>

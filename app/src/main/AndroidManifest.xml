@@ -12,6 +12,10 @@
     <uses-permission
         android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
+    <!-- For DownloadManager. -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:name="com.trinerdis.androidmaster.AndroidMaster"
         android:allowBackup="true"
@@ -77,6 +81,12 @@
         </activity>
 
         <activity android:name=".activity.RoboSpiceActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.DownloadManagerActivity">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>

@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.support.v7.widget.RecyclerView;
 
 import com.trinerdis.androidmaster.R;
+import com.trinerdis.androidmaster.activity.DownloadManagerActivity;
 import com.trinerdis.androidmaster.activity.DynamicFragmentActivity;
 import com.trinerdis.androidmaster.activity.MaterialDesignActivity;
 import com.trinerdis.androidmaster.activity.RecyclerViewActivity;
@@ -125,6 +126,11 @@ public class ExamplesAdapter extends RecyclerView.Adapter<ExamplesAdapter.ViewHo
                 mContext.getString(R.string.example_9_name),
                 mContext.getString(R.string.example_9_description),
                 RoboSpiceActivity.class
+            ),
+            new Item(
+                mContext.getString(R.string.example_10_name),
+                mContext.getString(R.string.example_10_description),
+                DownloadManagerActivity.class
             )
         }));
 
