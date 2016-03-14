@@ -22,13 +22,17 @@
     <string name="example_8_description">Retrofit library demo.</string>
     <string name="example_9_name">stephanenicolas/robospice</string>
     <string name="example_9_description">RoboSpice library demo.</string>
+    <string name="example_10_name">DownloadManager</string>
+    <string name="example_10_description">DownloadManager demo with notification progress.</string>
+    <string name="example_11_name">AsyncTask</string>
+    <string name="example_11_description">Demo of file downloading using AsyncTask.</string>
 
     <string name="static_fragment_title">Static Fragment</string>
     <string name="dynamic_fragment_title_pattern">Dynamic Fragment #%1d</string>
     <string name="replace_button_text">Replace Fragment</string>
     <string name="add_remove_button_text">Add/Remove Fragment</string>
     <string name="api_url">http://private-394ad9-androidmaster.apiary-mock.com/</string>
-    <string name="example_10_name">DownloadManager</string>
-    <string name="example_10_description">DownloadManager demo with notification progress.</string>
     <string name="start_download_button_text">Start Download</string>
+    <string name="stop_download_button_text">Stop Downloading</string>
+    <string name="download_progress_pattern">"Downloaded %1$s/%2$s"</string>
 </resources>

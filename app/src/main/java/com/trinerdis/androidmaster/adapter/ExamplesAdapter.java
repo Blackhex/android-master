@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.support.v7.widget.RecyclerView;
 
 import com.trinerdis.androidmaster.R;
+import com.trinerdis.androidmaster.activity.AsyncTaskActivity;
 import com.trinerdis.androidmaster.activity.DownloadManagerActivity;
 import com.trinerdis.androidmaster.activity.DynamicFragmentActivity;
 import com.trinerdis.androidmaster.activity.MaterialDesignActivity;
@@ -131,6 +132,11 @@ public class ExamplesAdapter extends RecyclerView.Adapter<ExamplesAdapter.ViewHo
                 mContext.getString(R.string.example_10_name),
                 mContext.getString(R.string.example_10_description),
                 DownloadManagerActivity.class
+            ),
+            new Item(
+                mContext.getString(R.string.example_11_name),
+                mContext.getString(R.string.example_11_description),
+                AsyncTaskActivity.class
             )
         }));
 
