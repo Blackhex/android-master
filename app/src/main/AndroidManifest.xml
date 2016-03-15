@@ -98,6 +98,24 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".activity.ThreadingActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.ThreadPoolActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.RenderingActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
         <service
             android:name="com.octo.android.robospice.GsonGoogleHttpClientSpiceService"
             android:exported="false"

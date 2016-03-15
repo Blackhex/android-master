@@ -26,6 +26,12 @@
     <string name="example_10_description">DownloadManager demo with notification progress.</string>
     <string name="example_11_name">AsyncTask</string>
     <string name="example_11_description">Demo of file downloading using AsyncTask.</string>
+    <string name="example_12_name">Threading</string>
+    <string name="example_12_description">Producer consumer threading demo.</string>
+    <string name="example_13_name">ThreadPool</string>
+    <string name="example_13_description">Thread pool threading demo.</string>
+    <string name="example_14_name">Custom Widget Rendering</string>
+    <string name="example_14_description">Demo of rendering in custom widgets.</string>
 
     <string name="static_fragment_title">Static Fragment</string>
     <string name="dynamic_fragment_title_pattern">Dynamic Fragment #%1d</string>

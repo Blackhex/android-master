@@ -15,10 +15,13 @@ import com.trinerdis.androidmaster.activity.DownloadManagerActivity;
 import com.trinerdis.androidmaster.activity.DynamicFragmentActivity;
 import com.trinerdis.androidmaster.activity.MaterialDesignActivity;
 import com.trinerdis.androidmaster.activity.RecyclerViewActivity;
+import com.trinerdis.androidmaster.activity.RenderingActivity;
 import com.trinerdis.androidmaster.activity.RetrofitActivity;
 import com.trinerdis.androidmaster.activity.RoboSpiceActivity;
 import com.trinerdis.androidmaster.activity.StaticFragmentActivity;
 import com.trinerdis.androidmaster.activity.TabsActivity;
+import com.trinerdis.androidmaster.activity.ThreadPoolActivity;
+import com.trinerdis.androidmaster.activity.ThreadingActivity;
 import com.trinerdis.androidmaster.activity.ViewModelActivity;
 import com.trinerdis.androidmaster.activity.VolleyActivity;
 
@@ -137,6 +140,21 @@ public class ExamplesAdapter extends RecyclerView.Adapter<ExamplesAdapter.ViewHo
                 mContext.getString(R.string.example_11_name),
                 mContext.getString(R.string.example_11_description),
                 AsyncTaskActivity.class
+            ),
+            new Item(
+                mContext.getString(R.string.example_12_name),
+                mContext.getString(R.string.example_12_description),
+                ThreadingActivity.class
+            ),
+            new Item(
+                mContext.getString(R.string.example_13_name),
+                mContext.getString(R.string.example_13_description),
+                ThreadPoolActivity.class
+            ),
+            new Item(
+                mContext.getString(R.string.example_14_name),
+                mContext.getString(R.string.example_14_description),
+                RenderingActivity.class
             )
         }));
 
