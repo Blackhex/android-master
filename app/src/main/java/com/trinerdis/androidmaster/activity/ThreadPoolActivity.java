@@ -14,6 +14,15 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * http://developer.android.com/reference/java/util/concurrent/ThreadPoolExecutor.html
+ *
+ * ExecutorService
+ * Handler,
+ * Runnable,
+ * Callable,
+ * Message,
+ * Looper,
+ * RetainedFragment,
+ * ResultReceiver
  */
 public class ThreadPoolActivity extends AppCompatActivity {
 
@@ -46,7 +55,7 @@ public class ThreadPoolActivity extends AppCompatActivity {
     protected int mTotal;
     protected long mStartTime;
 
-    private final Object mLock = new Object();
+    private static final Object mLock = new Object();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

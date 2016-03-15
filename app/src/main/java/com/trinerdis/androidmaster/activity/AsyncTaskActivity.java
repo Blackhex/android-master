@@ -60,12 +60,19 @@ public class AsyncTaskActivity extends AppCompatActivity {
 
         private long mLastUpdate = System.currentTimeMillis();
 
+        private final Object mLock = new Object();
+
         public void setPaused(boolean paused) {
-            mPaused = paused;
+            synchronized (mLock) {
+                mPaused = paused;
+                mLock.notify();
+            }
         }
 
         public boolean isPaused() {
-            return mPaused;
+            synchronized (mLock) {
+                return mPaused;
+            }
         }
 
         @Override
@@ -101,6 +108,8 @@ public class AsyncTaskActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void result) {
             Log.d(TAG, "onPostExecute()");
+
+            mDownloadTask = null;
 
             hideNotification();
         }
@@ -140,6 +149,13 @@ public class AsyncTaskActivity extends AppCompatActivity {
                 final byte[] buffer = new byte[1024];
                 int bufferLength;
                 while ((bufferLength = inputStream.read(buffer)) > 0) {
+
+                    synchronized (mLock) {
+                        while (mPaused) {
+                            mLock.wait();
+                        }
+                    }
+
                     outputStream.write(buffer, 0, bufferLength);
                     mCurrentSize += bufferLength;
 
@@ -154,6 +170,8 @@ public class AsyncTaskActivity extends AppCompatActivity {
                 Log.d(TAG, "doInBackground(): interrupted");
             } catch(IOException exception) {
                 Log.e(TAG, "doInBackground(): failed to download file", exception);
+            } catch (InterruptedException e) {
+                Log.d(TAG, "doInBackground(): interrupted");
             }
         }
     }
@@ -194,6 +212,8 @@ public class AsyncTaskActivity extends AppCompatActivity {
             mDownloadTask.cancel(true);
             mDownloadTask = null;
         }
+
+        hideNotification();
     }
 
     @Override
@@ -270,6 +290,7 @@ public class AsyncTaskActivity extends AppCompatActivity {
         // Add action to pause the download.
         Intent pauseIntent = new Intent(this, AsyncTaskActivity.class);
         pauseIntent.putExtra(EXTRA_REQUEST, REQUEST_PAUSE);
+        pauseIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         PendingIntent pausePendingIntent = PendingIntent.getActivity(
             this,
             REQUEST_PAUSE,
