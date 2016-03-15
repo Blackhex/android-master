@@ -297,12 +297,21 @@ public class AsyncTaskActivity extends AppCompatActivity {
     private void hideNotification() {
         Log.d(TAG, "hideNotification()");
 
-        // TODO
+        mNotificationManager.cancel(mNotificationId);
     }
 
     private void handleIntent(Intent intent) {
         Log.d(TAG, "handleIntent()");
 
-
+        if (intent.hasExtra(EXTRA_REQUEST)) {
+            switch (intent.getIntExtra(EXTRA_REQUEST, -1)) {
+                case REQUEST_PAUSE:
+                    pauseDownload();
+                    break;
+                case REQUEST_STOP:
+                    stopDownload();
+                    break;
+            }
+        }
     }
 }
